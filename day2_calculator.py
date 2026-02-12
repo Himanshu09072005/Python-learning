@@ -1,35 +1,40 @@
-print("Simple Calculator")
-print("1. Add")
-print("2. Subtract")
-print("3. Multiply")
-print("4. Divide")
+while True:
+    print("\nSimple Calculator")
+    print("1. Add")
+    print("2. Subtract")
+    print("3. Multiply")
+    print("4. Divide")
+    print("Type 'exit' to quit")
 
-choice = input("Enter your choice (1-4): ")
+    choice = input("Enter your choice (1-4): ")
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+    if choice == "exit":
+        print("Exiting calculator... Goodbye!")
+        break
 
-if choice == "1":
-    result = num1 + num2
-    print(f"Result: {result}")
+    num1 = float(input("Enter first number: "))
+    num2 = float(input("Enter second number: "))
 
-
-elif choice == "2":
-    result = num1 - num2
-    print(f"Result: {result}")
-
-
-elif choice == "3":
-    result = num1 * num2
-    print(f"Result: {result}")
-
-
-elif choice == "4":
-    if num2 != 0:
-        result = num1 / num2
+    if choice == "1":
+        result = num1 + num2
         print(f"Result: {result}")
-    else:
-        print("Error: Division by zero is not allowed")
 
-else:
-    print("Invalid choice")
+    elif choice == "2":
+        result = num1 - num2
+        print(f"Result: {result}")
+
+    elif choice == "3":
+        result = num1 * num2
+        print(f"Result: {result}")
+
+    elif choice == "4":
+        if num2 != 0:
+            result = num1 / num2
+            print(f"Result: {result}")
+        else:
+            print("Error: Division by zero is not allowed")
+
+    else:
+        print("Invalid choice")
+
+    print("Thank you for using the calculator!")
